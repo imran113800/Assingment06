@@ -1,2 +1,24 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.navbar{
+  text-decoration:rgb(37, 150, 190);
+}
+.navsection >li{
+  
+  list-style: none;
+  
+
+}
+.navsection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.primary-button{
+  gap: 20px;
+
+}
+
