@@ -10,8 +10,8 @@ const Subscription = ({ subscriptions }) => {
                         <div className="card-body">
                             <span className="badge badge-xs badge-warning">Most Popular</span>
                             <div className="flex justify-between">
-                                <h2 className="text-3xl font-bold">Premium</h2>
-                                <span className="text-xl">$29/mo</span>
+                                <h2 className="text-3xl font-bold">{subscriptions.name}</h2>
+                                <span className="text-xl">{subscriptions.price}</span>
                             </div>
                             <ul className="mt-6 flex flex-col gap-2 text-xs">
                                 <li>
@@ -40,7 +40,7 @@ const Subscription = ({ subscriptions }) => {
                                 </li>
                             </ul>
                             <div className="mt-6">
-                                <button className="btn btn-primary btn-block">Subscribe</button>
+                                <button className="btn btn-primary btn-block">Get Started</button>
                             </div>
                         </div>
                     </div>

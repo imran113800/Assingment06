@@ -4,12 +4,12 @@ import roket from'../../assets/rocket.png'
 
 const Steps = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto mt-15 '>
             <div className='text-center'>
                 <h1 className='font-bold text-3xl'>Get Started in 3 Steps</h1>
                 <p>Start using premium digital tools in minutes, not hours.</p>
             </div>
-            <div className='grid grid-cols-1 mt-2.5 sm:grid-cols-3 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 mt-2.5 sm:grid-cols-3 lg:grid-cols-3 mt-15' >
 
                 <div className="card bg-base-100 w-96 shadow-sm flex flex-col items-center text-center">
                     <img src={user} alt="" className='rounded-full w-[50px] h-[50px] ' />
