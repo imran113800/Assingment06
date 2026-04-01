@@ -10,7 +10,7 @@ const Product = ({ selectedCard, setSelectedCard, card, setCard }) => {
     setCard(prev => prev - 1);
   };
 
-  // total price calculate
+  
   const total = selectedCard.reduce((sum, item) => sum + item.price, 0);
 
   return (
@@ -23,7 +23,7 @@ const Product = ({ selectedCard, setSelectedCard, card, setCard }) => {
           <p className="text-gray-400 text-center">No Products Selected</p>
         ) : (
           <>
-            {/* Cart Items */}
+          
             <div className="space-y-3">
               {
                 selectedCard.map((item) => (
@@ -47,13 +47,13 @@ const Product = ({ selectedCard, setSelectedCard, card, setCard }) => {
               }
             </div>
 
-            {/* Total */}
+            
             <div className="flex justify-between mt-5 font-semibold">
               <span>Total:</span>
               <span>${total}</span>
             </div>
 
-            {/* Checkout Button */}
+            
             <button className="btn w-full mt-5 bg-gradient-to-r from-purple-700 via-purple-600 to-pink-500 text-white">
               Proceed To Checkout
             </button>

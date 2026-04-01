@@ -35,8 +35,6 @@ function App() {
       <main>
         <Homepage />
         <Homebar />
-
-        {/* ✅ ONLY this থাকবে */}
         <DigitalTools 
           productData={productData} 
           card={card} 
