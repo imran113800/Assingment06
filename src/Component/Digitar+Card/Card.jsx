@@ -1,38 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaCheck } from "react-icons/fa";
 
-const Card = ({ cardinfo }) => {
-    console.log(cardinfo)
-    return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+const Card = ({ cardinfo, setCard }) => {
 
-            {
-                cardinfo.price <= 35 ? (
-                    <h1 className='flex justify-end  border-2'>New</h1>
-                ) : cardinfo.price <= 70 ? (
-                    <h1>Best Seller</h1>
-                ) : (
-                    <h1>Popular</h1>
-                )
-            }
+  const [isSelected, setIsSelected] = useState(false);
 
-            <figure>
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes"
-                />
-            </figure>
+  if (!cardinfo) return null;
 
-            <div className="card-body">
-                <h2 className="card-title">{cardinfo.name}</h2>
-                <p>{cardinfo.description}</p>
+  const handleChoosePlayer = () => {
+    setIsSelected(true);
+    setCard(prev => prev + 1); // ✅ important fix
+  };
 
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
+  return (
+    <div className="card bg-base-100 w-96 shadow-sm">
+      <div className="card-body">
 
-        </div>
-    );
+        <span className="badge badge-xs badge-warning">
+          {
+            cardinfo.price <= 35 ? "New" :
+            cardinfo.price <= 70 ? "Best Seller" :
+            "Popular"
+          }
+        </span>
+
+        <h2 className="text-3xl font-bold">{cardinfo.name}</h2>
+        <span className="text-xl">${cardinfo.price}/Mo</span>
+
+        <ul className="mt-4 space-y-2">
+          {
+            cardinfo.features?.map((feature, index) => (
+              <li key={index} className='flex items-center gap-2'>
+                <FaCheck className="text-green-500" />
+                {feature}
+              </li>
+            ))
+          }
+        </ul>
+
+        <button
+          onClick={handleChoosePlayer}
+          disabled={isSelected}
+          className={`btn w-full mt-6 text-white ${
+            isSelected 
+              ? "bg-gray-400 cursor-not-allowed" 
+              : "bg-gradient-to-r from-purple-700 via-purple-600 to-pink-500"
+          }`}
+        >
+          {isSelected ? "Purchased" : "Buy Now"}
+        </button>
+
+      </div>
+    </div>
+  );
 };
 
 export default Card;

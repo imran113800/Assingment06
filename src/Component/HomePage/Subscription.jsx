@@ -3,7 +3,7 @@ import React from 'react';
 const Subscription = ({ subscriptions }) => {
     return (
         <div>
-            <div className='container mx-auto'>
+            <div className='container mx-auto '>
                 
                 <div>
                     <div className="card w-96 bg-base-100 shadow-sm">
