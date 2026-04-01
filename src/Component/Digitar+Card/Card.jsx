@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCheck } from "react-icons/fa";
 
-const Card = ({ cardinfo, setCard }) => {
+const Card = ({ cardinfo, setCard,selectedCard,setSelectedCard }) => {
 
   const [isSelected, setIsSelected] = useState(false);
 
@@ -9,7 +9,8 @@ const Card = ({ cardinfo, setCard }) => {
 
   const handleChoosePlayer = () => {
     setIsSelected(true);
-    setCard(prev => prev + 1); // ✅ important fix
+    setCard(prev => prev + 1);
+    setSelectedCard([...selectedCard,cardinfo])
   };
 
   return (

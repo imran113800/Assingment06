@@ -4,6 +4,7 @@ import Product from './Product';
 
 const DigitalTools = ({ productData, setCard, card }) => {
   const [selectedType, setSelectedType] = useState("Product");
+  const [selectedCard,setSelectedCard]=useState([])
 
   return (
     <div className='text-center mt-15'>
@@ -25,6 +26,7 @@ const DigitalTools = ({ productData, setCard, card }) => {
           onClick={() => setSelectedType("Product")}
         >
           Product
+
         </button>
 
         <button
@@ -45,9 +47,11 @@ const DigitalTools = ({ productData, setCard, card }) => {
             ? <Cardinfo 
                 productData={productData} 
                 setCard={setCard} 
-                card={card} 
+                card={card}
+                selectedCard={selectedCard}
+                setSelectedCard={setSelectedCard} 
               />
-            : <Product />
+            : <Product selectedCard={selectedCard} setSelectedCard={setSelectedCard} card={card} setCard={setCard}/>
         }
       </div>
     </div>
