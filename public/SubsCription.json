@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Basic",
+        "price": "$9/mo",
+        "badge": "Starter",
+        "features": [
+            {
+                "title": "Low-resolution image generation",
+                "available": true
+            },
+            {
+                "title": "Basic style templates",
+                "available": true
+            },
+            {
+                "title": "Limited batch processing",
+                "available": true
+            },
+            {
+                "title": "Standard image enhancements",
+                "available": true
+            },
+            {
+                "title": "Cloud integration",
+                "available": false
+            },
+            {
+                "title": "Real-time collaboration",
+                "available": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Premium",
+        "price": "$29/mo",
+        "badge": "Most Popular",
+        "features": [
+            {
+                "title": "High-resolution image generation",
+                "available": true
+            },
+            {
+                "title": "Customizable style templates",
+                "available": true
+            },
+            {
+                "title": "Batch processing capabilities",
+                "available": true
+            },
+            {
+                "title": "AI-driven image enhancements",
+                "available": true
+            },
+            {
+                "title": "Seamless cloud integration",
+                "available": false
+            },
+            {
+                "title": "Real-time collaboration tools",
+                "available": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Enterprise",
+        "price": "$59/mo",
+        "badge": "Best Value",
+        "features": [
+            {
+                "title": "Ultra high-resolution generation",
+                "available": true
+            },
+            {
+                "title": "Advanced style customization",
+                "available": true
+            },
+            {
+                "title": "Unlimited batch processing",
+                "available": true
+            },
+            {
+                "title": "AI-powered premium enhancements",
+                "available": true
+            },
+            {
+                "title": "Seamless cloud integration",
+                "available": true
+            },
+            {
+                "title": "Real-time collaboration tools",
+                "available": true
+            }
+        ]
+    }
+]
